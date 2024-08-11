@@ -1,3 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@layer components {
+  .slide-btn {
+    @apply w-1/2 active:bg-gray-700;
+  }
+}

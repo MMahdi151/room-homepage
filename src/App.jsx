@@ -1,5 +1,15 @@
+import Hero from "./components/hero";
+import Navbar from "./components/navbar";
+import About from "./components/about";
+
 function App() {
-  return <div className="bg-red-500 text-2xl">hi</div>;
+  return (
+    <>
+      <Navbar />
+      <Hero />
+      <About />
+    </>
+  );
 }
 
 export default App;
