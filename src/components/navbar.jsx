@@ -14,13 +14,19 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`absolute top-0 left-0 w-full h-32 px-8 sm:px-24 bg-transparent text-white z-50 items-center grid grid-cols-3 sm:flex gap-8 sm:gap-10 lg:gap-16`}
+      className={`absolute top-0 left-0 w-full h-32 px-8 sm:px-24 bg-transparent text-white z-50 items-center grid grid-cols-3 sm:flex gap-8 sm:gap-10 lg:gap-16  ${
+        isOpen && "bg-white sm:bg-transparent grid-cols-[1fr_3fr] sm:flex gap-8"
+      }`}
     >
       <button
         onClick={() => setIsOpen(!isOpen)}
         className={`sm:hidden justify-self-start ${isOpen && "text-black"}`}
       >
-        <FontAwesomeIcon icon={faNavicon} className="nav-btn" />
+        {isOpen ? (
+          <FontAwesomeIcon icon={faClose} className="nav-btn" />
+        ) : (
+          <FontAwesomeIcon icon={faNavicon} className="nav-btn" />
+        )}
       </button>
       <img
         src="/images/logo.svg"
