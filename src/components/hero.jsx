@@ -37,7 +37,7 @@ export default function Hero() {
             <button className="slide-btn" onClick={() => slideCtrl(-1)}>
               <FontAwesomeIcon icon={faChevronLeft} />
             </button>
-            <button className="slide-btn" onClick={() => slideCtrl(1)}>
+            <button className="slide-btn" onClick={() => slideCtrl(+1)}>
               <FontAwesomeIcon icon={faChevronRight} />
             </button>
           </div>
